@@ -42,29 +42,27 @@ const AboutPage = () => {
         </motion.div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {[
-            { icon: Users, label: 'Happy Travelers', value: '50,000+' },
-            { icon: Globe, label: 'Destinations', value: '100+' },
-            { icon: Award, label: 'Awards Won', value: '25+' },
-            { icon: Clock, label: 'Years Experience', value: '13+' }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="flex justify-center mb-4">
-                <stat.icon size={40} className="text-teal-600" />
-              </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+  {[
+    { icon: Users, label: 'Happy Travelers', value: '50,000+' },
+    { icon: Globe, label: 'Destinations', value: '100+' },
+    { icon: Clock, label: 'Years Experience', value: '13+' }
+  ].map((stat, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      className="text-center"
+    >
+      <div className="flex justify-center mb-4">
+        <stat.icon size={40} className="text-teal-600" />
+      </div>
+      <div className="text-3xl font-bold text-gray-800 mb-2">{stat.value}</div>
+      <div className="text-gray-600">{stat.label}</div>
+    </motion.div>
+  ))}
+</div>
         {/* Why Choose Us */}
         <div className="bg-gray-50 rounded-2xl p-8">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>

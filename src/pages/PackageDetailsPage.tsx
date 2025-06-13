@@ -68,7 +68,8 @@ const PackageDetailsPage = () => {
       <div className="relative h-[60vh] min-h-[400px]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${packageDetails.image})` }}
+          style={{ backgroundImage: `url(Rs
+            {packageDetails.image})` }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="absolute inset-0 container mx-auto px-4 flex flex-col justify-center">

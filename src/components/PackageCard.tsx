@@ -60,9 +60,9 @@ const PackageCard: React.FC<PackageCardProps> = ({ package: pkg }) => {
             <span className="text-gray-500 text-sm">Starting from</span>
             <div className="flex items-center">
               {pkg.discount && (
-                <span className="text-gray-400 line-through mr-2">${pkg.originalPrice}</span>
+                <span className="text-gray-400 line-through mr-2">Rs {pkg.originalPrice}</span>
               )}
-              <span className="text-2xl font-bold text-teal-600">${pkg.price}</span>
+              <span className="text-2xl font-bold text-teal-600">Rs {pkg.price}</span>
               <span className="text-gray-500 text-sm ml-1">/ person</span>
             </div>
           </div>

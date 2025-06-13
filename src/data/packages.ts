@@ -20,7 +20,7 @@ export const travelPackages: TravelPackage[] = [
     id: "cultural-varanasi",
     title: "Sacred Varanasi Experience",
     description: "Immerse yourself in the spiritual heart of India. Witness the mesmerizing Ganga Aarti at Dashashwamedh Ghat, explore ancient temples, take a holy dip in the Ganges, and experience the world's oldest living city. Package includes traditional accommodation and guided spiritual tours.",
-    price: 499,
+    price: 490,
     duration: "4 days",
     location: "Varanasi, Uttar Pradesh, India",
     category: "Cultural",
