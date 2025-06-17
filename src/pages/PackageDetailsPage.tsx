@@ -19,6 +19,7 @@ import {
   IndianRupee,
 } from 'lucide-react';
 import { travelPackages } from '../data/packages';
+import { itinerary } from '../data/Itinerary';
 
 const PackageDetailsPage = () => {
   const { id } = useParams();
@@ -32,6 +33,10 @@ const PackageDetailsPage = () => {
     endDate: '',
     travelers: '2',
     budget: '',
+  });
+
+  const filteredItinerary = itinerary.filter(pkg => {
+    return pkg.packageId == packageDetails?.id;
   });
 
   const handleChange = (
@@ -135,18 +140,17 @@ const PackageDetailsPage = () => {
             <div className="bg-white rounded-xl shadow-md p-6 mb-8">
               <h2 className="text-2xl font-bold mb-4">Itinerary</h2>
               <div className="space-y-6">
-                {Array.from({ length: 3 }).map((_, index) => (
-                  <div key={index} className="border-l-2 border-teal-600 pl-4">
-                    <h3 className="text-lg font-semibold mb-2">
-                      Day {index + 1}
-                    </h3>
-                    <p className="text-gray-600">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                  </div>
-                ))}
+              {filteredItinerary.map((itinerary, index) => (
+                <div key={index} className="border-l-2 border-teal-600 pl-4 mb-4">
+                  <h3 className="text-lg font-semibold mb-2">
+                    Day {index + 1}: {itinerary.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {itinerary.description}
+                  </p>
+                </div>
+              ))}
+
               </div>
             </div>
 
